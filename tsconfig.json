@@ -1,0 +1,53 @@
+{
+  "atom": {
+    "formatOnSave": true
+  },
+  "compileOnSave": true,
+  "buildOnSave": true,
+  "compilerOptions": {
+    "types": [
+      "node"
+    ],
+    "outDir": "./lib",
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "sourceMap": true,
+    "declaration": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noResolve": false,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "module": "amd",
+    "moduleResolution": "node",
+    "removeComments": false,
+    "target": "es6",
+    "watch": false,
+    "pretty": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "rootDirs": [
+      "./src/ts"
+    ],
+    "paths": {
+      "*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "bower_components",
+    "jspm_packages",
+    "**/*.spec.ts",
+    ".vscode"
+  ]
+}
