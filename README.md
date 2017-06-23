@@ -1,11 +1,11 @@
-jsedn
+tsedn
 =====
 
-A javascript implementation of [edn](https://github.com/edn-format/edn). To see it in action checkout the [edn playground](https://shaunxcode.github.com/jsedn). If you open your browser console you will have access to a global jsedn object with which you can try things beside JSON encoding. I recommend `jsedn.unify("[?x was always better than ?y]", {x: "sonic", y: "mario"}).jsEncode()`.  
+A typescript implementation of [edn](https://github.com/edn-format/edn). To see it in action checkout the [edn playground](https://shaunxcode.github.com/tsedn). If you open your browser console you will have access to a global tsedn object with which you can try things beside JSON encoding. I recommend `tsedn.unify("[?x was always better than ?y]", {x: "sonic", y: "mario"}).jsEncode()`.  
 
-[![Build Status](https://travis-ci.org/shaunxcode/jsedn.svg?branch=master)](https://travis-ci.org/shaunxcode/jsedn)
-[![npm version](https://badge.fury.io/js/jsedn.svg)](https://www.npmjs.com/package/jsedn)
-[![Coverage Status](https://coveralls.io/repos/github/shaunxcode/jsedn/badge.svg?branch=master)](https://coveralls.io/github/shaunxcode/jsedn?branch=master)
+[![Build Status](https://travis-ci.org/shaunxcode/tsedn.svg?branch=master)](https://travis-ci.org/shaunxcode/tsedn)
+[![npm version](https://badge.fury.io/js/tsedn.svg)](https://www.npmjs.com/package/tsedn)
+[![Coverage Status](https://coveralls.io/repos/github/shaunxcode/tsedn/badge.svg?branch=master)](https://coveralls.io/github/shaunxcode/tsedn?branch=master)
 
 
 ## Getting Started
@@ -13,15 +13,15 @@ A javascript implementation of [edn](https://github.com/edn-format/edn). To see 
 ### Install
 
 ```bash
-npm install jsedn
+npm install tsedn
 ```
 
 ### Use in a web page directly 
-Use `jsedn.js`, which is a standalone version that will provide a global "jsedn".
+Use `tsedn.js`, which is a standalone version that will provide a global "tsedn".
 
 ### Code
 ```js
-var edn = require("jsedn");
+var edn = require("tsedn");
 var map = edn.parse("{:a 5 [1 2] {:name :mike :age 40}}");
 console.log(map.at(new edn.Vector([1, 2])).at(edn.kw(":name")));
 ```
@@ -54,14 +54,14 @@ edn.parse(edn.encode({
 Will output `"electric"`. Definitely working in both directions. 
 
 ###Command Line
-If you have installed via `npm` you will have a jsedn script that accepts input via pipe/stdin. Currently takes:
+If you have installed via `npm` you will have a tsedn script that accepts input via pipe/stdin. Currently takes:
 
 * `-s` flag for "select" which you pass a path separated by space
 * `-j` encodes input as JSON
 * `-p` indicates pretty print for json output
 
 ```bash
-> echo "{:a first-item :b [{:name :walter :age 50 :kids [:A :B :C]}]}" | jsedn -s ":b 0 :kids 2"
+> echo "{:a first-item :b [{:name :walter :age 50 :kids [:A :B :C]}]}" | tsedn -s ":b 0 :kids 2"
 outputs: :b 0 :kids 2 => :C
 ```
 	
@@ -265,7 +265,7 @@ outputs:
 
 ##Conversion Table
 
-| element         | edn                  | jsedn              | js |
+| element         | edn                  | tsedn              | ts |
 | --------------- | -------------------- | ------------------ | --- |
 | nil             | ```nil```            | ```null```         | ```null``` | 
 | boolean         | ```true false```     | ```true false```   | ```true false``` | 

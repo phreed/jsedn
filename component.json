@@ -1,9 +1,9 @@
 {
-  "name": "jsedn",
-  "repo": "shaunxcode/jsedn",
-  "description": "edn parser, encode/decode for js",
+  "name": "tsedn",
+  "repo": "phreed/tsedn",
+  "description": "edn parser, encode/decode for ts",
   "version": "0.3.4",
-  "keywords": ["edn", "clojure", "datomic", "lisp"], 
+  "keywords": ["edn", "clojure", "datomic", "lisp", "typescript"], 
   "dependencies": {
     "jkroso/equals": "*",
     "component/type": "*"

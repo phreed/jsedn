@@ -1,5 +1,5 @@
 {
-  "name": "jsedn",
+  "name": "tsedn",
   "description": "js implementation of edn",
   "version": "0.4.0",
   "keywords": [
@@ -11,19 +11,23 @@
   ],
   "maintainers": [
     {
-      "name": "Shaun Gilchrist",
-      "email": "shaunxcode@gmail.com",
-      "web": "http://order-of-no.posterous.com"
+      "name": "Fred Eisele",
+      "email": "phreed@gmail.com",
     }
   ],
   "contributors": [
     {
       "name": "Shaun Gilchrist",
-      "email": "shaunxcode@gmail.com",
+      "email": "phreed@gmail.com",
+      "web": "http://order-of-no.posterous.com"
+    }
+    {
+      "name": "Fred Eisele",
+      "email": "phreed@gmail.com",
       "web": "http://order-of-no.posterous.com"
     }
   ],
-  "bugs": "http://www.github.com/shaunxcode/jsedn/issues",
+  "bugs": "http://www.github.com/phreed/tsedn/issues",
   "licenses": [
     {
       "type": "MIT",
@@ -32,7 +36,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://www.github.com/shaunxcode/jsedn"
+    "url": "http://www.github.com/phreed/tsedn"
   },
   "devDependencies": {
     "coffee-script": "latest",
@@ -48,7 +52,7 @@
     "equals": "latest"
   },
   "bin": {
-    "jsedn": "./bin/jsedn"
+    "tsedn": "./bin/tsedn"
   },
   "scripts": {
     "test-perf": "coffee test/perf.coffee && coffee test/performance-tests.coffee",

@@ -36,19 +36,19 @@
 </style>
 </head>
 <body>
-	<a href="http://github.com/shaunxcode/jsedn">jsedn github</a>
+	<a href="http://github.com/phreed/tsedn">tsedn github</a>
 	<h3>EDN</h3> 
 	<textarea id="source">[:hello {:this :is :some #{valid edn}} as-of #inst "2013"]</textarea>
 	<button id="parse">parse to JSON</button>
 	<h3>JSON</h3>
 	<pre id="output"></pre>
-	<script src="jsedn.js"></script>
+	<script src="tsedn.js"></script>
 	<script>
 		var source = CodeMirror.fromTextArea(document.getElementById("source"), {lineNumbers: true});
 		var $output = $("#output");
 		$("#parse").click(function(){
 			try {
-				$("#output").text(JSON.stringify(jsedn.toJS(jsedn.parse(source.getValue())), null, 2));
+				$("#output").text(JSON.stringify(tsedn.toJS(tsedn.parse(source.getValue())), null, 2));
 			} catch (e) {
 				alert(e);
 			}
