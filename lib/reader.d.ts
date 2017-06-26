@@ -1,11 +1,10 @@
 import { Symbol, Keyword, StringObj, Char, BigInt } from "atoms";
-import { LinkedList as List, Stack as Vector, Set, Dictionary as Map } from "typescript-collections";
 import { Tag, Tagged, Action } from "tags";
 import { encode, encodeJson } from "encode";
 import { atPath } from "atPath";
 import { parse as unify } from "unify";
 export { atPath, unify, encode, encodeJson };
-export { Char, Symbol, Keyword, BigInt, List, Vector, Map, Set, Tag, Tagged };
+export { Char, Symbol, Keyword, BigInt, Tag, Tagged };
 export declare function lex(str: string): {
     tokens: (string | StringObj)[];
     tokenLines: number[];

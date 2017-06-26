@@ -1,6 +1,5 @@
 
 import { Symbol, Keyword, StringObj, Char, Discard, BigInt } from "atoms";
-import { LinkedList as List, Stack as Vector, Set, Dictionary as Map } from "typescript-collections";
 import { Tag, Tagged, tagActions, Action } from "tags";
 import { encodeHandlers, encode, encodeJson } from "encode";
 import { handleToken, tokenHandlers } from "tokens";
@@ -10,12 +9,12 @@ import { atPath } from "atPath";
 import { parse as unify } from "unify";
 
 export { atPath, unify, encode, encodeJson };
-export { Char, Symbol, Keyword, BigInt, List, Vector, Map, Set, Tag, Tagged };
+export { Char, Symbol, Keyword, BigInt, Tag, Tagged };
 
 const typeClasses: { [key: string]: any } = {
   Map: Map,
-  List: List,
-  Vector: Vector,
+  List: Array,
+  Vector: Array,
   Set: Set,
   Discard: Discard,
   Tag: Tag,
